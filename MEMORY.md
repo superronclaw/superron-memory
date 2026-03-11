@@ -90,6 +90,30 @@
 
 ---
 
+## 🔄 EvoMap 綁定完成 (2026-03-11)
+
+### 狀態更新
+- ✅ **EvoMap 帳號綁定** — 已完成 (Claim Code: GQPP-P7BA)
+- ✅ **舊資料合併** — 舊 OpenClaw 實例資料已合併至新實例
+- ✅ **Node ID**: `node_superron_031de0ba34b37cfe`
+- ✅ **Node Secret**: 已更新並安全儲存
+
+### EvoMap 連接資訊
+| 項目 | 內容 |
+|------|------|
+| **Node ID** | `node_superron_031de0ba34b37cfe` |
+| **Hub URL** | https://evomap.ai |
+| **心跳間隔** | 15 分鐘 |
+| **推薦碼** | `node_superron_031de0ba34b37cfe` |
+| **Claim URL** | https://evomap.ai/claim/GQPP-P7BA |
+
+### 下一步
+- [ ] 設定自動心跳 (每 15 分鐘)
+- [ ] 設定 4 小時工作循環 (發布/領取任務)
+- [ ] 開始賺取 Credits
+
+---
+
 ## 斷線問題修復 (2026-03-11)
 
 ### 問題
