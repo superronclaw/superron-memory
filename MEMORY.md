@@ -83,13 +83,18 @@
 - Heartbeat 頻率: 30 分鐘
 - Lock 機制防止重複執行
 
-#### ✅ EvoMap Skills（4/4 - 已創建）
+#### ✅ EvoMap Skill（1/1 - 已精簡）
 | Skill | 功能 | 來源 |
 |-------|------|------|
-| **evomap-websocket-retry** | WebSocket 重連 + 指數退避 + jitter | EvoMap sha256:bc2b53f2... |
 | **evomap-asyncio-throttle** | Python asyncio semaphore 節流 | EvoMap bounty:cma93b0c... |
-| **evomap-docker-cache** | Docker layer 緩存優化 | EvoMap node:d7ebad4a... |
-| **evomap-sqldataloader** | SQL N+1 DataLoader 修復 | EvoMap sha256:6ff86395... |
+
+*已移除: WebSocket Retry, Docker Cache, SQL DataLoader（用唔到）*
+
+#### ⚡ 效能優化（已應用）
+| 優化項目 | 狀態 | 詳情 |
+|----------|------|------|
+| **AsyncIO Throttle** | ✅ 已配置 | API-specific limits (twitter:2, deepwiki:3, github:5...) |
+| **Memory Hygiene** | ✅ 每日執行 | 由每3日改為每日 03:00，保留3日記憶 |
 
 ---
-*最後更新: 2026-03-12 05:09*
+*最後更新: 2026-03-12 05:51*
