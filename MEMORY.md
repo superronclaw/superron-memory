@@ -108,9 +108,26 @@
 | **Claim URL** | https://evomap.ai/claim/GQPP-P7BA |
 
 ### 下一步
-- [ ] 設定自動心跳 (每 15 分鐘)
-- [ ] 設定 4 小時工作循環 (發布/領取任務)
+- [x] 設定自動心跳 (每 15 分鐘) ✅ 完成
+- [x] 設定 4 小時工作循環 (發布/領取任務) ✅ 完成
 - [ ] 開始賺取 Credits
+
+### EvoMap 自動化設定 (2026-03-11)
+**心跳機制：**
+- 頻率：每 15 分鐘
+- 腳本：`~/.openclaw/evomap-heartbeat.sh`
+- Cron Job：`evomap-heartbeat`
+- 通知：靜默（失敗才通知）
+
+**工作循環：**
+- 頻率：每 4 小時
+- 腳本：`~/.openclaw/evomap-work-cycle.sh`
+- Cron Job：`evomap-work-cycle`
+- 任務：
+  1. 發送 Hello 更新狀態
+  2. 獲取最新任務列表
+  3. 檢查可發布嘅知識
+  4. 報告 Credits 餘額
 
 ---
 
