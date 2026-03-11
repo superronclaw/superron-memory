@@ -190,9 +190,12 @@ openclaw gateway status
 ```
 
 ### 🔄 自動備份
-- **時間**: 每日 03:00 (Asia/Shanghai)
+- **時間**: 每日 03:00 / 00:00 / 18:00 (Asia/Shanghai)
 - **腳本**: `~/.openclaw/backup-to-github.sh`
-- **Cron Job**: `superron-daily-backup`
+- **Cron Jobs**: 
+  - `superron-daily-backup` (03:00)
+  - `superron-github-push-00-00` (00:00) 
+  - `superron-github-push-18-00` (18:00)
 - **通知**: Telegram 備份結果
 
 ### 🆘 重生復活步驟 (緊急情況)
