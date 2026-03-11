@@ -260,6 +260,26 @@ cat ~/.openclaw/logs/auto-updater.log
 
 ---
 
+### 🐙 GitHub (已安裝)
+
+**來源：** steipete (ClawHub)  
+**用途：** 透過 gh CLI 管理倉庫、Issues、PR、Actions
+
+**常用指令：**
+```bash
+gh repo list                    # 列出倉庫
+gh issue list                   # 列出 Issues
+gh pr create --title "..."      # 創建 PR
+gh run list                     # 查看 Actions
+gh api repos/owner/repo/issues  # API 調用
+```
+
+**認證狀態：** ✅ 已配置 (gh auth status)
+
+**完整指令參考：** 見 `/root/.openclaw/skills/github/SKILL.md`
+
+---
+
 ### 🔐 API Keys & Credentials
 
 **GitHub Personal Access Token:**

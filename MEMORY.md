@@ -89,6 +89,12 @@
   - 功能：從被動回答變成主動發現問題、主動提醒
   - 特點：主動響應、即時提醒、情境感知
 
+- ✅ **GitHub** (2026-03-11) — GitHub 操作
+  - 來源：steipete (ClawHub)
+  - 位置：`/root/.openclaw/skills/github/`
+  - 功能：透過 gh CLI 管理倉庫、Issues、PR、Actions
+  - 狀態：已配置並認證
+
 ### API Keys
 - **GitHub**: 已配置 (Token 已儲存於系統，唔會喺檔案顯示)
   - 用途: GitHub CLI 認證
