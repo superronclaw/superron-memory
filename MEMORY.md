@@ -40,7 +40,7 @@
 
 ### 新增進度 (05:01)
 
-#### ✅ 已安裝 Skills（18/18）
+#### ✅ 已安裝 Skills（19/19）
 | Skill | 來源 | 狀態 |
 |-------|------|------|
 | **agent-browser** | GitHub | ✅ |
@@ -49,6 +49,7 @@
 | **find-skills** | Manual | ✅ |
 | **humanizer** | Manual | ✅ |
 | **memory-setup** | Manual | ✅ |
+| **memory-hygiene** | Manual | ✅ |
 | **self-improving-agent** | GitHub | ✅ |
 | **x-tweet-fetcher** | GitHub (ythx-101) | ✅ |
 | **agent-autopilot** | GitHub (xing5) | ✅ 替代版 |
@@ -58,14 +59,12 @@
 | **daily-report** | Existing | ✅ |
 | **md-to-pdf** | Existing | ✅ |
 
-#### ⏳ 待裝 Skills（ClawHub Only - 可能冇 GitHub 版）
-- diagram-generator (Matthewyin)
-- adaptive-reasoning (enzoricciulli)
-- proactive-agent
-- skill-creator
-- skill-vetter
-
-*註：搵過 GitHub，呢幾個 skill 可能係 ClawHub 獨家*
+#### ⏳ 待裝 Skills（ClawHub Only - 可選）
+- diagram-generator (Matthewyin) - 如需生成圖表
+- adaptive-reasoning (enzoricciulli) - 如需動態推理
+- proactive-agent - 如需主動提醒
+- skill-creator - 如需創建技能
+- skill-vetter - 如需審查技能
 
 #### 📊 Token 優化
 - **Applied**: QMD-like memory (bge_m3_embed), prompt caching, workspace compression
