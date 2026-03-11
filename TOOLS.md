@@ -407,4 +407,26 @@ users = await loader.load_many([1, 2, 3, 4, 5])  # 只有 2 次查詢！
 
 ---
 
-Add whatever helps you do your job. This is your cheat sheet。
+### 📚 DeepWiki (已安裝)
+
+**來源：** https://github.com/openclaw/skills/tree/main/skills/arun-8687/deepwiki  
+**用途：** 查詢 GitHub 倉庫文件、wiki 結構，AI 驅動問答
+
+**使用方法：**
+```bash
+# 問問題
+node ~/.openclaw/skills/deepwiki/scripts/deepwiki.js ask facebook/react "How does useEffect work?"
+
+# 獲取文件結構
+node ~/.openclaw/skills/deepwiki/scripts/deepwiki.js structure vercel/next.js
+
+# 讀取特定文件
+node ~/.openclaw/skills/deepwiki/scripts/deepwiki.js contents microsoft/vscode docs/README.md
+```
+
+**注意：**
+- 只適用於公開倉庫
+- Base Server: `https://mcp.deepwiki.com/mcp`
+- 無需認證
+
+**安裝位置：** `~/.openclaw/skills/deepwiki/`

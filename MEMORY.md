@@ -40,7 +40,7 @@
 
 ### 新增進度 (05:01)
 
-#### ✅ 已安裝 Skills（19/19）
+#### ✅ 已安裝 Skills（20/20）
 | Skill | 來源 | 狀態 |
 |-------|------|------|
 | **agent-browser** | GitHub | ✅ |
@@ -55,6 +55,7 @@
 | **agent-autopilot** | GitHub (xing5) | ✅ 替代版 |
 | **github-skill** | GitHub (anthony-brown-dev) | ✅ |
 | **clawdbot-backup** | GitHub (openclaw/skills) | ✅ 已應用 |
+| **deepwiki** | GitHub (arun-8687) | ✅ |
 | **channels-setup** | Existing | ✅ |
 | **daily-report** | Existing | ✅ |
 | **md-to-pdf** | Existing | ✅ |
