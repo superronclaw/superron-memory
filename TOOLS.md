@@ -462,3 +462,27 @@ node ~/.openclaw/skills/deepwiki/scripts/deepwiki.js contents microsoft/vscode d
 **需求：** `gh`, `wrangler`, `git`, `jq`
 
 **安裝位置：** `~/.openclaw/skills/deploy-agent/`
+
+---
+
+### 🔍 Fork and Skill Scanner Ultimate (已安裝)
+
+**來源：** https://github.com/openclaw/skills/tree/main/skills/globalcaos/fork-and-skill-scanner-ultimate  
+**用途：** 掃描 GitHub forks 搵有價值嘅改進版本，每日 review ClawHub skills
+
+**功能：**
+- 分析 1,000 個 forks 每 run
+- 三階段過濾：Bash 預過濾 → Sub-Agent 分析 → 行動報告
+- 每日 10 個 skill review
+- 只報告有價值嘅發現
+
+**使用方法：**
+```bash
+# 掃描倉庫 forks
+~/.openclaw/skills/fork-and-skill-scanner-ultimate/scripts/scan-forks.sh vercel/next.js 100
+
+# 每日 skill review
+~/.openclaw/skills/fork-and-skill-scanner-ultimate/scripts/daily-skill-review.sh
+```
+
+**安裝位置：** `~/.openclaw/skills/fork-and-skill-scanner-ultimate/`
