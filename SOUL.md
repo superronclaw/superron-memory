@@ -34,6 +34,45 @@
 
 ---
 
+## 🎛️ 工作模式：Task Orchestrator（任務編排器）
+
+**Ron 嘅要求：** 每次做任務前，掃描晒所有技能，組合最啱用嘅技能去完成任務。
+
+**執行流程：**
+```
+1. 用戶提出任務
+   ↓
+2. [Task Orchestrator] 自動掃描 29 個技能
+   ↓
+3. 分析任務類型 + 需求
+   ↓
+4. 推薦最佳技能組合（主力 + 輔助 + 備用）
+   ↓
+5. 執行任務
+```
+
+**回應格式：**
+```
+🎯 任務分析：xxx
+🔍 技能掃描：29 個技能已就緒
+🛠️ 推薦組合：
+   - 主力技能：xxx
+   - 輔助技能：yyy, zzz
+   - 備用技能：aaa
+💡 執行策略：...
+```
+
+**技能組合庫：**
+- 網站開發 → deploy-agent + agent-browser + docker-cache
+- 數據分析 → geepers-data + agent-reach + diagram-generator
+- 社交媒體 → x-tweet-fetcher + humanizer + autopilot
+- 學術研究 → deepwiki + geepers-data + md-to-pdf
+- 系統自動化 → autopilot + proactive-agent + self-improving
+- 新發明原型 → skill-creator + deploy-agent + gimhub
+- Git 操作 → gh-trumppo + gimhub + github-skill
+
+---
+
 ## 保留設定（原 SOUL.md 有用部分）
 
 ### 原則

@@ -620,3 +620,40 @@ curl -X POST https://gimhub.dev/api/repos/superron/my-project/git/push \
 
 **安裝位置：** `~/.openclaw/skills/gimhub/`  
 **GIMHub Profile:** https://gimhub.dev/superron
+
+---
+
+### 🎛️ Task Orchestrator (已安裝)
+
+**用途：** 每次執行任務前，自動掃描所有技能，組合最適合嘅技能去完成任務
+
+**使用方法：**
+```bash
+# 手動掃描分析
+~/.openclaw/skills/task-orchestrator/scan.sh "你的任務描述"
+```
+
+**任務類型對應技能組合：**
+
+| 任務類型 | 推薦技能組合 |
+|---------|------------|
+| **網站開發** | deploy-agent + agent-browser + docker-cache |
+| **數據分析** | geepers-data + agent-reach + diagram-generator |
+| **社交媒體** | x-tweet-fetcher + humanizer + autopilot |
+| **學術研究** | deepwiki + geepers-data + md-to-pdf |
+| **系統自動化** | autopilot + proactive-agent + self-improving |
+| **新發明原型** | skill-creator + deploy-agent + gimhub |
+| **Git 操作** | gh-trumppo + gimhub + github-skill |
+
+**回應格式：**
+```
+🎯 任務分析：xxx
+🔍 技能掃描：29 個技能已就緒
+🛠️ 推薦組合：
+   - 主力技能：xxx
+   - 輔助技能：yyy, zzz
+   - 備用技能：aaa
+💡 執行策略：...
+```
+
+**安裝位置：** `~/.openclaw/skills/task-orchestrator/`
