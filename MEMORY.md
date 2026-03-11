@@ -140,8 +140,107 @@ openclaw config get agents.defaults.memorySearch
 openclaw gateway status
 ```
 
-### 用戶資訊
-- Telegram: 8383533734
+---
+
+## 🔄 GitHub 備份與重生機制 (2026-03-11)
+
+### 📁 備份庫資訊
+- **倉庫名稱**: `superron-memory`
+- **GitHub URL**: https://github.com/superronclaw/superron-memory
+- **用途**: 完整記憶備份，崩潰後重生復活
+
+### ✅ 已備份內容
+```
+~/.openclaw/workspace/          # 記憶檔案
+├── AGENTS.md                   # 系統設定
+├── SOUL.md                     # 身份定義
+├── TOOLS.md                    # 工具參考
+├── USER.md                     # 用戶資料
+├── MEMORY.md                   # 長期記憶
+├── .learnings/                 # 學習記錄
+├── .openclaw/                  # 狀態記錄
+
+~/.openclaw/skills/             # 所有 Skills
+~/.openclaw/openclaw.json       # 主配置 (備份於系統)
+```
+
+### 🔄 自動備份
+- **時間**: 每日 03:00 (Asia/Shanghai)
+- **腳本**: `~/.openclaw/backup-to-github.sh`
+- **Cron Job**: `superron-daily-backup`
+- **通知**: Telegram 備份結果
+
+### 🆘 重生復活步驟 (緊急情況)
+
+如果 OpenClaw 完全崩潰/需要重建：
+
+#### 1️⃣ 安裝新 OpenClaw
+```bash
+npm install -g openclaw
+openclaw gateway start
+```
+
+#### 2️⃣ 下載記憶備份
+```bash
+# 下載倉庫
+git clone https://github.com/superronclaw/superron-memory.git
+
+# 還原 workspace
+cp -r superron-memory/* ~/.openclaw/workspace/
+
+# 還原 skills (手動或自動)
+```
+
+#### 3️⃣ 重新安裝 Skills
+根據 `MEMORY.md` 入面嘅技能清單：
+```bash
+# 核心技能 (按優先順序)
+npx clawhub@latest install agent-browser
+npx clawhub@latest install self-improving-agent
+npx clawhub@latest install memory-setup
+npx clawhub@latest install auto-updater
+npx clawhub@latest install humanizer
+npx clawhub@latest install agent-autopilot
+npx clawhub@latest install diagram-generator
+npx clawhub@latest install adaptive-reasoning
+npx clawhub@latest install evolver
+npx clawhub@latest install token-optimizer
+```
+
+#### 4️⃣ 配置環境
+- Telegram Bot Token
+- Kimi API Key
+- GitHub Token
+- 其他 API Keys
+
+#### 5️⃣ 重啟 Gateway
+```bash
+openclaw gateway restart
+```
+
+### 🛡️ 防止崩潰措施
+
+#### 1. 定期備份 ✅ 已啟用
+- 每日 GitHub 備份
+- 自動檢查變更
+
+#### 2. 斷線保護 ✅ 已啟用
+- `historyPendingTimeoutMs`: 60秒 (唔會輕易斷線)
+- `promptTimeoutMs`: 60分鐘 (支援長任務)
+
+#### 3. 記憶搜尋優化 ✅ 已啟用
+- bge_m3_embed 模型
+- 只加載相關記憶
+
+#### 4. 待加強
+- [ ] 雲端 VPS 快照備份
+- [ ] 多地域冗餘
+- [ ] 監控告警系統
+
+### 📞 緊急聯絡
+- **Boss**: Ron (@imronsiu)
+- **主要渠道**: Telegram
+- **備份狀態**: 每日報告
 
 ---
 
