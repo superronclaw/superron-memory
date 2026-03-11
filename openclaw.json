@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.15",
-    "lastTouchedAt": "2026-03-11T18:35:03.644Z"
+    "lastTouchedAt": "2026-03-11T19:44:28.497Z"
   },
   "env": {
     "KIMI_API_KEY": "sk-kimi-vfipMr1IIygFyByzcuQ9RYrGmZ9kGq0PBDxIltrpEqnmj1qFFh4XRbyJQa3ibNho",
@@ -104,7 +104,14 @@
   "session": {
     "dmScope": "main"
   },
-  "channels": {},
+  "channels": {
+    "telegram": {
+      "dmPolicy": "pairing",
+      "botToken": "8671053995:AAE44MOD2UiZnBPqosHkueqtvg1goQxfl04",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
   "gateway": {
     "port": 18789,
     "mode": "local",
