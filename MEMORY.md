@@ -40,7 +40,7 @@
 
 ### 新增進度 (05:01)
 
-#### ✅ 已安裝 Skills（22/22）
+#### ✅ 已安裝 Skills（23/23）
 | Skill | 來源 | 狀態 |
 |-------|------|------|
 | **agent-browser** | GitHub | ✅ |
@@ -58,6 +58,7 @@
 | **deepwiki** | GitHub (arun-8687) | ✅ |
 | **deploy-agent** | GitHub (sherajdev) | ✅ |
 | **fork-scanner** | GitHub (globalcaos) | ✅ 已應用 |
+| **geepers-data** | GitHub (lukeslp) | ✅ 已學習 |
 | **channels-setup** | Existing | ✅ |
 | **daily-report** | Existing | ✅ |
 | **md-to-pdf** | Existing | ✅ |

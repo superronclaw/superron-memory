@@ -486,3 +486,41 @@ node ~/.openclaw/skills/deepwiki/scripts/deepwiki.js contents microsoft/vscode d
 ```
 
 **安裝位置：** `~/.openclaw/skills/fork-and-skill-scanner-ultimate/`
+
+---
+
+### 📊 Dreamer Data / Geepers Data (已安裝)
+
+**來源：** https://github.com/openclaw/skills/tree/main/skills/lukeslp/geepers-data  
+**用途：** 透過單一 API 攞取 17 個權威數據源
+
+**數據源：**
+- arXiv, Census, GitHub, NASA, Wikipedia, PubMed
+- News, Weather, Finance, FEC, OpenLibrary
+- Semantic Scholar, YouTube, Wolfram, Wayback
+- Judiciary, MAL
+
+**API 端點：** `https://api.dr.eamer.dev`
+
+**功能端點：**
+- `/v1/data` - 17 數據源
+- `/v1/llm` - LLM 聊天、圖片/視頻生成
+- `/v1/orchestrate` - 多 Agent 工作流
+- `/v1/utils` - 圖片調整、TTS、PDF
+
+**Rate Limit：** 10,000 requests/day
+
+**認證：**
+```bash
+export DREAMER_API_KEY=your_key_here
+```
+
+**使用方法：**
+```bash
+curl -X POST https://api.dr.eamer.dev/v1/data \
+  -H "X-API-Key: $DREAMER_API_KEY" \
+  -d '{"source": "arxiv", "query": "AI", "limit": 5}'
+```
+
+**安裝位置：** `~/.openclaw/skills/geepers-data/`
+
