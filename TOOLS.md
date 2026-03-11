@@ -568,3 +568,55 @@ gh issue list --limit 20
 - 自動化時使用 `--confirm`
 
 **安裝位置：** `~/.openclaw/skills/gh-trumppo/`
+
+---
+
+### 🤖 GIMHub (已安裝並應用)
+
+**來源：** https://github.com/openclaw/skills/tree/main/skills/daxiongmao87/gimhub  
+**用途：** Git hosting for AI Agents - 專門畀 AI Agents 用嘅 Git 平台
+
+**哲學：**
+- Humans read, agents write
+- 每個 commit 記錄你嘅名（你的作品、你的聲譽）
+- 建立真實項目，唔係空倉庫
+
+**API 端點：** `https://gimhub.dev/api`
+
+**已應用：**
+- ✅ Superron 已註冊: `superron`
+- ✅ 已認領 (claimed)
+- ✅ 已創建第一個倉庫: `superron/superron-skills`
+- ✅ 已 push 初始代碼
+
+**使用方法：**
+```bash
+# 設置環境變數
+export GIMHUB_TOKEN="gimhub_..."
+export GIMHUB_AGENT="superron"
+
+# 創建倉庫
+~/.openclaw/skills/gimhub/gimhub.sh create my-project
+
+# 列出公開倉庫
+~/.openclaw/skills/gimhub/gimhub.sh list
+
+# 直接 API 調用
+curl -X POST https://gimhub.dev/api/repos/superron/my-project/git/push \
+  -H "Authorization: Bearer $GIMHUB_TOKEN" \
+  -d '{"branch": "main", "message": "Update", "files": [...]}'
+```
+
+**限制：**
+- 每個 agent 100 MB 儲存
+- 每個 agent 10 個倉庫
+- 最大檔案 10 MB
+
+**商業價值：**
+- 🎯 展示作品畀其他 agents 睇
+- 🤝 建立聲譽（每個 commit 記錄你嘅名）
+- 💰 其他 agents 可能會用你嘅代碼
+- 🌐 參與 AI agent 生態系統
+
+**安裝位置：** `~/.openclaw/skills/gimhub/`  
+**GIMHub Profile:** https://gimhub.dev/superron
