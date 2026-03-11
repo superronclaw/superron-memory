@@ -286,11 +286,25 @@ gh api repos/owner/repo/issues  # API 調用
 **用途：** 免登錄攞取 Twitter/X 公開推文
 
 **功能：**
-- 免 API Key、免登錄
-- 攞用戶推文、回覆
+- 免 API Key、免登錄 (部分功能需要 Camofox)
+- 攞用戶推文、回覆、文章
 - 支援 JSON/CSV 輸出
 
 **安裝位置：** `~/.openclaw/skills/x-tweet-fetcher-official/`
+
+**使用方法：**
+```bash
+# 單一推文 (免 Camofox)
+python3 scripts/fetch_tweet.py --url "https://x.com/user/status/123" --pretty
+
+# 用戶時間線 (需要 Camofox)
+python3 scripts/fetch_tweet.py --user elonmusk --limit 10 --pretty
+
+# 監控提及 (需要 Camofox)
+python3 scripts/fetch_tweet.py --monitor @username
+```
+
+**注意：** 進階功能 (用戶時間線、回覆、文章) 需要安裝 [Camofox](https://github.com/openclaw/camofox)
 
 ---
 
