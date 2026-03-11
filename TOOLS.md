@@ -430,3 +430,35 @@ node ~/.openclaw/skills/deepwiki/scripts/deepwiki.js contents microsoft/vscode d
 - 無需認證
 
 **安裝位置：** `~/.openclaw/skills/deepwiki/`
+
+---
+
+### 🚀 Deploy Agent (已安裝)
+
+**來源：** https://github.com/openclaw/skills/tree/main/skills/sherajdev/deploy-agent  
+**用途：** 多步驟部署全棧應用：Build → Test → GitHub → Cloudflare Pages
+
+**工作流程：**
+| 步驟 | 指令 | 描述 |
+|------|------|------|
+| 1 | `deploy-agent init <name>` | 開始部署 |
+| 2 | `deploy-agent build <name>` | 構建應用 |
+| 3 | `deploy-agent test <name>` | 本地測試 |
+| 4 | `deploy-agent push <name>` | 推送到 GitHub |
+| 5 | `deploy-agent deploy <name>` | 部署到 Cloudflare |
+
+**使用方法：**
+```bash
+# 初始化
+~/.openclaw/skills/deploy-agent/deploy-agent.sh init my-app
+
+# 查看狀態
+~/.openclaw/skills/deploy-agent/deploy-agent.sh status my-app
+
+# 部署
+~/.openclaw/skills/deploy-agent/deploy-agent.sh deploy my-app
+```
+
+**需求：** `gh`, `wrangler`, `git`, `jq`
+
+**安裝位置：** `~/.openclaw/skills/deploy-agent/`
