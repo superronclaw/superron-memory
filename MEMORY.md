@@ -83,6 +83,12 @@
   - 功能：自動審查 session logs，持續自我改進
   - 特點：協議約束進化、安全機制、與 Self-Improving-Agent 互補
 
+- ✅ **Proactive Agent** (2026-03-11) — 主動型 Agent
+  - 來源：ClawHub Community
+  - 位置：`/root/.openclaw/skills/proactive-agent/`
+  - 功能：從被動回答變成主動發現問題、主動提醒
+  - 特點：主動響應、即時提醒、情境感知
+
 ### API Keys
 - **GitHub**: 已配置 (Token 已儲存於系統，唔會喺檔案顯示)
   - 用途: GitHub CLI 認證

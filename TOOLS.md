@@ -240,6 +240,26 @@ cat ~/.openclaw/logs/auto-updater.log
 
 ---
 
+### 🚀 Proactive Agent (已安裝)
+
+**來源：** ClawHub Community  
+**用途：** 從被動回答變成主動發現問題、主動提醒
+
+**核心功能：**
+- **主動發現問題**：唔等開口，識別潛在問題
+- **主動提醒**：提前通知重要事項、期限、風險
+- **主動建議**：基於情境提供改進方案
+- **自主行動**：喺界限內自動執行
+
+**同其他 Skills 組合：**
+- **Agent Autopilot**：處理長期複雜任務
+- **Proactive Agent**：日常主動響應
+- **Self-Improving-Agent**：從反饋中學習
+
+**完整指令參考：** 見 `/root/.openclaw/skills/proactive-agent/SKILL.md`
+
+---
+
 ### 🔐 API Keys & Credentials
 
 **GitHub Personal Access Token:**
