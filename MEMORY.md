@@ -40,7 +40,7 @@
 
 ### 新增進度 (05:01)
 
-#### ✅ 已安裝 Skills（23/23）
+#### ✅ 已安裝 Skills（24/24）
 | Skill | 來源 | 狀態 |
 |-------|------|------|
 | **agent-browser** | GitHub | ✅ |
@@ -59,6 +59,7 @@
 | **deploy-agent** | GitHub (sherajdev) | ✅ |
 | **fork-scanner** | GitHub (globalcaos) | ✅ 已應用 |
 | **geepers-data** | GitHub (lukeslp) | ✅ 已學習 |
+| **gh-trumppo** | GitHub (trumppo) | ✅ 已應用 |
 | **channels-setup** | Existing | ✅ |
 | **daily-report** | Existing | ✅ |
 | **md-to-pdf** | Existing | ✅ |

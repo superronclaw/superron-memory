@@ -524,3 +524,47 @@ curl -X POST https://api.dr.eamer.dev/v1/data \
 
 **安裝位置：** `~/.openclaw/skills/geepers-data/`
 
+
+---
+
+### 🐙 GitHub CLI (gh) - trumppo (已安裝並應用)
+
+**來源：** https://github.com/openclaw/skills/tree/main/skills/trumppo/gh  
+**用途：** 使用 GitHub CLI 執行核心 GitHub 操作
+
+**核心功能：**
+- 認證狀態檢查
+- 倉庫創建/複製/分叉
+- Issues 管理
+- Pull Requests 管理
+- Releases 發布
+
+**已應用：**
+- ✅ gh 已認證 (superronclaw)
+- ✅ Token scopes: repo, workflow, admin 等
+
+**使用方法：**
+```bash
+# 檢查認證
+gh auth status
+
+# 創建私人倉庫
+gh repo create NAME --private --confirm
+
+# 列出 PRs
+gh pr list --limit 20
+
+# 列出 Issues
+gh issue list --limit 20
+
+# 使用輔助腳本
+~/.openclaw/skills/gh-trumppo/gh-helper.sh status
+~/.openclaw/skills/gh-trumppo/gh-helper.sh repo-info
+```
+
+**安全注意：**
+- 確認目標倉庫後先執行破壞性操作
+- 私人倉庫使用 `--private`
+- 自動化時使用 `--confirm`
+
+**安裝位置：** `~/.openclaw/skills/gh-trumppo/`
