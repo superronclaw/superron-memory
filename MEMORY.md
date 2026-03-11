@@ -146,7 +146,7 @@
 
 ---
 
-## Token 優化配置 (2026-03-11)
+## Token 優化配置 (2026-03-11) - 已更新
 
 基於 [ccjing 嘅優化指南](https://juejin.cn/post/7613237473859534857) 實施：
 
@@ -156,10 +156,16 @@
 |---------|------|---------|
 | **記憶搜尋** | bge_m3_embed 模型 | 90%+ |
 | **Prompt Caching** | `cacheRetention: "long"` | 70-90% |
+| **maxTokens 限制** | 32768 | 控制輸出成本 |
 | **Workspace 精簡** | 核心文件 ≤500 tokens | 20-50% |
 | **子 Agent 隔離** | maxConcurrent: 4/8 | 60-80% |
 | **Compaction** | safeguard 模式 | 持續優化 |
-| **Thinking 模式** | 按需啟用 | 避免浪費 |
+| **Timeout 調整** | historyPending: 60s, prompt: 60min | 減少斷線 |
+
+### 📊 組合效果預估
+- **總節省**: 97%+
+- **響應時間**: 3-5秒 → 1-2秒
+- **長會話**: 支援100+輪對話不卡頓
 
 ### 📊 組合效果預估
 - **總節省**: 97%+
