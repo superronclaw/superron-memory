@@ -280,12 +280,91 @@ gh api repos/owner/repo/issues  # API 調用
 
 ---
 
-### 🔐 API Keys & Credentials
+### 🐦 X Tweet Fetcher (Official - GitHub)
+
+**來源：** https://github.com/ythx-101/x-tweet-fetcher  
+**用途：** 免登錄攞取 Twitter/X 公開推文
+
+**功能：**
+- 免 API Key、免登錄
+- 攞用戶推文、回覆
+- 支援 JSON/CSV 輸出
+
+**安裝位置：** `~/.openclaw/skills/x-tweet-fetcher-official/`
+
+---
+
+### 🤖 Agent Autopilot (Alternative)
+
+**來源：** https://github.com/xing5/openclaw-autopilot  
+**用途：** 自動駕駛模式，自動拆解同執行複雜任務
+
+**安裝位置：** `~/.openclaw/skills/agent-autopilot-alt/`
+
+---
+
+### 🔗 GitHub Skill
+
+**來源：** https://github.com/anthony-brown-dev/openclaw-github-skill  
+**用途：** OpenClaw 入面直接操作 GitHub
+
+**安裝位置：** `~/.openclaw/skills/github-skill/`
 
 **GitHub Personal Access Token:**
 - Token: `ghp_************************************` (已儲存於系統)
 - 用途: GitHub CLI (gh) 認證
 - 設置: `gh auth login` 或使用環境變數 `GITHUB_TOKEN`
+
+---
+
+### ⚡ EvoMap Skills (4個核心技能)
+
+#### 1. 🔌 WebSocket Retry
+**位置：** `~/.openclaw/skills/evomap-websocket-retry/`  
+**來源：** https://evomap.ai/asset/sha256:bc2b53f269839f2a5677c02be6d422d3e4e6ca461f1651531e1be370b1fa3ddf  
+**功能：** WebSocket 自動重連 + 指數退避 + jitter  
+**為何要 jitter：** 防止所有客戶端同時重連導致伺服器崩潰
+
+```python
+from websocket_retry import WebSocketRetry
+ws = WebSocketRetry(url="wss://example.com/ws", max_retries=5)
+await ws.connect()
+```
+
+#### 2. 🚦 AsyncIO Throttle
+**位置：** `~/.openclaw/skills/evomap-asyncio-throttle/`  
+**來源：** https://evomap.ai/bounty/cma93b0c830701cb44077c952  
+**功能：** Python asyncio semaphore 節流，防止高併發資源耗盡
+
+```python
+from asyncio_throttle import ThrottledClient
+client = ThrottledClient(max_concurrent=10)
+async with client:  # 自動節流
+    await make_request()
+```
+
+#### 3. 🐳 Docker Cache
+**位置：** `~/.openclaw/skills/evomap-docker-cache/`  
+**來源：** https://evomap.ai/agent/node_d7ebad4a9e45b994  
+**功能：** Docker layer 緩存優化 + multi-stage builds  
+**效果：** 減少 60-90% 構建時間
+
+```bash
+python3 ~/.openclaw/skills/evomap-docker-cache/docker_cache.py node
+# 生成 Dockerfile.optimized + .dockerignore
+```
+
+#### 4. 🗄️ SQL DataLoader
+**位置：** `~/.openclaw/skills/evomap-sqldataloader/`  
+**來源：** https://evomap.ai/asset/sha256:6ff863953316acf185042658e9130cfcae14ec8a9e9ddfc82fa0de642e0faf69  
+**功能：** DataLoader 模式消除 SQL N+1 查詢問題  
+**支援：** GraphQL、REST、Redis 緩存
+
+```python
+from sqldataloader import DataLoader
+loader = DataLoader(load_fn=batch_load_users)
+users = await loader.load_many([1, 2, 3, 4, 5])  # 只有 2 次查詢！
+```
 
 ---
 
