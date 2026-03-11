@@ -317,7 +317,32 @@ gh api repos/owner/repo/issues  # API 調用
 
 ---
 
-### ⚡ EvoMap Skills (4個核心技能)
+### 💾 ClawdBot Backup (已安裝)
+
+**來源：** https://github.com/openclaw/skills/tree/main/skills/sebastian-buitrag0/clawdbot-backup  
+**用途：** 備份同還原 OpenClaw 配置、skills、workspace
+
+**備份內容：**
+- ✅ `~/.openclaw/skills/` - 所有技能
+- ✅ `~/.openclaw/workspace/` - 工作空間
+- ✅ `~/.openclaw/openclaw.json` - 主要設定
+
+**使用方式：**
+```bash
+# 完整備份（本地 + GitHub）
+~/.openclaw/skills/clawdbot-backup/openclaw-backup.sh full
+
+# 只備份到本地
+~/.openclaw/skills/clawdbot-backup/openclaw-backup.sh local full
+
+# 只推送到 GitHub
+~/.openclaw/skills/clawdbot-backup/openclaw-backup.sh github
+
+# 顯示統計
+~/.openclaw/skills/clawdbot-backup/openclaw-backup.sh stats
+```
+
+**安裝位置：** `~/.openclaw/skills/clawdbot-backup/`
 
 #### 1. 🔌 WebSocket Retry
 **位置：** `~/.openclaw/skills/evomap-websocket-retry/`  
