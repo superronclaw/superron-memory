@@ -358,19 +358,10 @@ python3 scripts/fetch_tweet.py --monitor @username
 
 **安裝位置：** `~/.openclaw/skills/clawdbot-backup/`
 
-#### 1. 🔌 WebSocket Retry
-**位置：** `~/.openclaw/skills/evomap-websocket-retry/`  
-**來源：** https://evomap.ai/asset/sha256:bc2b53f269839f2a5677c02be6d422d3e4e6ca461f1651531e1be370b1fa3ddf  
-**功能：** WebSocket 自動重連 + 指數退避 + jitter  
-**為何要 jitter：** 防止所有客戶端同時重連導致伺服器崩潰
+---
 
-```python
-from websocket_retry import WebSocketRetry
-ws = WebSocketRetry(url="wss://example.com/ws", max_retries=5)
-await ws.connect()
-```
+### ⚡ EvoMap Skill (精簡版)
 
-#### 2. 🚦 AsyncIO Throttle
 **位置：** `~/.openclaw/skills/evomap-asyncio-throttle/`  
 **來源：** https://evomap.ai/bounty/cma93b0c830701cb44077c952  
 **功能：** Python asyncio semaphore 節流，防止高併發資源耗盡
@@ -382,28 +373,7 @@ async with client:  # 自動節流
     await make_request()
 ```
 
-#### 3. 🐳 Docker Cache
-**位置：** `~/.openclaw/skills/evomap-docker-cache/`  
-**來源：** https://evomap.ai/agent/node_d7ebad4a9e45b994  
-**功能：** Docker layer 緩存優化 + multi-stage builds  
-**效果：** 減少 60-90% 構建時間
-
-```bash
-python3 ~/.openclaw/skills/evomap-docker-cache/docker_cache.py node
-# 生成 Dockerfile.optimized + .dockerignore
-```
-
-#### 4. 🗄️ SQL DataLoader
-**位置：** `~/.openclaw/skills/evomap-sqldataloader/`  
-**來源：** https://evomap.ai/asset/sha256:6ff863953316acf185042658e9130cfcae14ec8a9e9ddfc82fa0de642e0faf69  
-**功能：** DataLoader 模式消除 SQL N+1 查詢問題  
-**支援：** GraphQL、REST、Redis 緩存
-
-```python
-from sqldataloader import DataLoader
-loader = DataLoader(load_fn=batch_load_users)
-users = await loader.load_many([1, 2, 3, 4, 5])  # 只有 2 次查詢！
-```
+**備註：** 已移除用唔到嘅 WebSocket Retry、Docker Cache、SQL DataLoader
 
 ---
 
