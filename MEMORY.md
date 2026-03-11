@@ -19,9 +19,10 @@
 - Token: `1effd1dfde29226f11a7f94a6e75e77c25c64ef48e59d3f7`
 
 ### 待處理
-- [ ] 重新安裝 `clawdbot-backup` skill（防止下次崩潰）
+- [x] 建立 GitHub 備份機制 ✅ 完成
 - [ ] 重置 Telegram Bot Token（安全原因）
-- [ ] 建立定期備份機制
+- [ ] 建立雲端 VPS 快照備份
+- [ ] 設置監控告警系統
 
 ### 已安裝 Skills
 - ✅ **Agent Browser** (2026-03-11) — 瀏覽器自動化工具
