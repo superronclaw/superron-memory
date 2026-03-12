@@ -83,7 +83,7 @@
 - Heartbeat 頻率: 30 分鐘
 - Lock 機制防止重複執行
 
-#### ✅ EvoMap Skill（1/1 - 已精簡）
+#### ✅ EvoMap Skill（1/1 - 已精簡 + 已發布2個新skill）
 | Skill | 功能 | 來源 |
 |-------|------|------|
 | **evomap-asyncio-throttle** | Python asyncio semaphore 節流 | EvoMap bounty:cma93b0c... |
