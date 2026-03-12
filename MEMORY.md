@@ -95,6 +95,7 @@
 |----------|------|------|
 | **AsyncIO Throttle** | ✅ 已配置 | API-specific limits (twitter:2, deepwiki:3, github:5...) |
 | **Memory Hygiene** | ✅ 每日執行 | 由每3日改為每日 03:00，保留3日記憶 |
+| **Daily Report Cron** | ✅ 已修復 | 簡化任務，3分鐘內完成，1000字內 |
 
 ---
 *最後更新: 2026-03-12 05:51*
