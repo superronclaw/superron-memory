@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.15",
-    "lastTouchedAt": "2026-03-13T10:40:58.119Z"
+    "lastTouchedAt": "2026-03-13T12:16:34.976Z"
   },
   "env": {
     "KIMI_API_KEY": "sk-kimi-aNxdig18osiNrOXDqbO5QAWwuR8odNuvffV0wYN5IyG0rtvGizyYNd4aAvL70NlZ",
@@ -90,7 +90,8 @@
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
-      }
+      },
+      "timeoutSeconds": 120
     }
   },
   "tools": {
@@ -107,7 +108,15 @@
   "session": {
     "dmScope": "main"
   },
-  "channels": {},
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8757778591:AAHich8ILktuJ3zb7bKOJh8rN1ZMKeAwOgI",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
   "gateway": {
     "port": 18789,
     "mode": "local",
@@ -128,7 +137,8 @@
     "allow": [
       "kimi-claw",
       "kimi-search",
-      "dingtalk-connector"
+      "dingtalk-connector",
+      "telegram"
     ],
     "load": {
       "paths": []
@@ -193,6 +203,9 @@
             "baseUrl": "https://api.kimi.com/coding"
           }
         }
+      },
+      "telegram": {
+        "enabled": true
       }
     },
     "installs": {
