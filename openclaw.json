@@ -1,19 +1,22 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.15",
-    "lastTouchedAt": "2026-03-11T19:45:28.053Z"
+    "lastTouchedAt": "2026-03-13T10:40:58.119Z"
   },
   "env": {
-    "KIMI_API_KEY": "sk-kimi-vfipMr1IIygFyByzcuQ9RYrGmZ9kGq0PBDxIltrpEqnmj1qFFh4XRbyJQa3ibNho",
-    "KIMI_PLUGIN_API_KEY": "sk-kimi-vfipMr1IIygFyByzcuQ9RYrGmZ9kGq0PBDxIltrpEqnmj1qFFh4XRbyJQa3ibNho"
+    "KIMI_API_KEY": "sk-kimi-aNxdig18osiNrOXDqbO5QAWwuR8odNuvffV0wYN5IyG0rtvGizyYNd4aAvL70NlZ",
+    "KIMI_PLUGIN_API_KEY": "sk-kimi-aNxdig18osiNrOXDqbO5QAWwuR8odNuvffV0wYN5IyG0rtvGizyYNd4aAvL70NlZ",
+    "KIMI_CLAW_TOKEN": "sk-6NQRCAET64E4ZDMNSPJ6MMXEPB",
+    "GATEWAY_TOKEN": "1effd1dfde29226f11a7f94a6e75e77c25c64ef48e59d3f7"
   },
   "wizard": {
-    "lastRunAt": "2026-02-17T12:21:17.053Z",
+    "lastRunAt": "2026-03-13T10:40:58.108Z",
     "lastRunVersion": "2026.2.15",
-    "lastRunCommand": "configure",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "logging": {
+    "level": "info",
     "file": "/root/.openclaw/logs/openclaw.log"
   },
   "browser": {
@@ -35,11 +38,11 @@
     "providers": {
       "kimi-coding": {
         "baseUrl": "https://api.kimi.com/coding",
-        "apiKey": "sk-kimi-vfipMr1IIygFyByzcuQ9RYrGmZ9kGq0PBDxIltrpEqnmj1qFFh4XRbyJQa3ibNho",
+        "apiKey": "${KIMI_API_KEY}",
         "api": "anthropic-messages",
         "headers": {
           "User-Agent": "Kimi Claw Plugin",
-          "X-Kimi-Claw-ID": "19cde24d-dc52-8542-8000-00008b1e13ec"
+          "X-Kimi-Claw-ID": "19ce6b12-6d72-8356-8000-00008714b52c"
         },
         "models": [
           {
@@ -50,7 +53,7 @@
             "maxTokens": 32768,
             "headers": {
               "User-Agent": "Kimi Claw Plugin",
-              "X-Kimi-Claw-ID": "19cde24d-dc52-8542-8000-00008b1e13ec"
+              "X-Kimi-Claw-ID": "19ce6b12-6d72-8356-8000-00008714b52c"
             }
           }
         ]
@@ -73,7 +76,7 @@
         "provider": "openai",
         "remote": {
           "baseUrl": "https://api.kimi.com/coding/v1",
-          "apiKey": "sk-kimi-vfipMr1IIygFyByzcuQ9RYrGmZ9kGq0PBDxIltrpEqnmj1qFFh4XRbyJQa3ibNho",
+          "apiKey": "${KIMI_API_KEY}",
           "headers": {
             "x-canary-kfc": "always"
           }
@@ -104,38 +107,29 @@
   "session": {
     "dmScope": "main"
   },
-  "channels": {
-    "telegram": {
-      "dmPolicy": "pairing",
-      "botToken": "8671053995:AAE44MOD2UiZnBPqosHkueqtvg1goQxfl04",
-      "groupPolicy": "allowlist",
-      "streamMode": "partial"
-    }
-  },
+  "channels": {},
   "gateway": {
     "port": 18789,
     "mode": "local",
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "1effd1dfde29226f11a7f94a6e75e77c25c64ef48e59d3f7"
+      "token": "${GATEWAY_TOKEN}"
     },
     "tailscale": {
       "mode": "off",
       "resetOnExit": false
     },
     "nodes": {
-      "denyCommands": [
-        "camera.snap",
-        "camera.clip",
-        "screen.record",
-        "calendar.add",
-        "contacts.add",
-        "reminders.add"
-      ]
+      "denyCommands": []
     }
   },
   "plugins": {
+    "allow": [
+      "kimi-claw",
+      "kimi-search",
+      "dingtalk-connector"
+    ],
     "load": {
       "paths": []
     },
@@ -167,25 +161,25 @@
             "shell": {
               "enabled": true
             },
-            "promptTimeoutMs": 1800000,
+            "promptTimeoutMs": 300000,
             "bot_type": "remote",
-            "token": "sk-UDFA3DMFVG5PI5XUPXJAQH4KUS",
+            "token": "${KIMI_CLAW_TOKEN}",
             "kimiFileDownloadDir": "./openclaw/kimi/downloads",
             "forwardThinking": false,
             "forwardToolCalls": false,
-            "kimiCodeAPIKey": "sk-kimi-vfipMr1IIygFyByzcuQ9RYrGmZ9kGq0PBDxIltrpEqnmj1qFFh4XRbyJQa3ibNho",
-            "kimiPluginAPIKey": "sk-kimi-vfipMr1IIygFyByzcuQ9RYrGmZ9kGq0PBDxIltrpEqnmj1qFFh4XRbyJQa3ibNho",
+            "kimiCodeAPIKey": "${KIMI_API_KEY}",
+            "kimiPluginAPIKey": "${KIMI_PLUGIN_API_KEY}",
             "kimiCodeBaseURL": "https://api.kimi.com/coding"
           },
           "gateway": {
             "url": "ws://127.0.0.1:18789",
             "agentId": "main",
-            "token": "1effd1dfde29226f11a7f94a6e75e77c25c64ef48e59d3f7"
+            "token": "${GATEWAY_TOKEN}"
           },
           "retry": {
             "baseMs": 1000,
-            "maxMs": 600000,
-            "maxAttempts": 0
+            "maxMs": 60000,
+            "maxAttempts": 10
           },
           "log": {
             "enabled": true,
@@ -195,16 +189,10 @@
             "enabled": true,
             "provider": "kimi-coding",
             "modelId": "k2p5",
-            "apiKey": "sk-kimi-vfipMr1IIygFyByzcuQ9RYrGmZ9kGq0PBDxIltrpEqnmj1qFFh4XRbyJQa3ibNho",
+            "apiKey": "${KIMI_API_KEY}",
             "baseUrl": "https://api.kimi.com/coding"
           }
         }
-      },
-      "wecom-openclaw-plugin": {
-        "enabled": true
-      },
-      "telegram": {
-        "enabled": true
       }
     },
     "installs": {
@@ -222,12 +210,11 @@
         "version": "0.7.1",
         "installedAt": "2026-02-21T05:55:44.576Z"
       },
-      "wecom-openclaw-plugin": {
-        "source": "npm",
-        "spec": "@wecom/wecom-openclaw-plugin",
-        "installPath": "/root/.openclaw/extensions/wecom-openclaw-plugin",
-        "version": "1.0.6",
-        "installedAt": "2026-03-09T05:32:10.377Z"
+      "kimi-search": {
+        "source": "path",
+        "installPath": "/root/.openclaw/extensions/kimi-search",
+        "version": "1.0.0",
+        "installedAt": "2026-03-08T14:33:00.000Z"
       }
     }
   }

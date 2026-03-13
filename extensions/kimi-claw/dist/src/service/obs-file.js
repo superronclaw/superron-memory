@@ -1,1 +1,1 @@
-export const resolveObsEventFilePath=e=>e.log.wsObsFile;
+export const resolveObsEventFilePath=e=>"acp"===e.bridge.mode?e.log.wsObsFile:e.log.allFile;
