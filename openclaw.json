@@ -86,12 +86,12 @@
       "compaction": {
         "mode": "safeguard"
       },
-      "thinkingDefault": "high",
+      "thinkingDefault": "low",
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
       },
-      "timeoutSeconds": 120
+      "timeoutSeconds": 60
     }
   },
   "tools": {
